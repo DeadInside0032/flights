@@ -3,7 +3,7 @@ import { Card, Form, Row, Col } from "react-bootstrap";
 
 export default function DestinationCard(props) {
     let city = {image:'', name:'', country:''}
-    if (propTypes.city){
+    if (props.city){
         city = props.city
     }
 
