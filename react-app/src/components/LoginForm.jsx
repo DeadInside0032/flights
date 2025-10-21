@@ -1,6 +1,5 @@
-import { Button } from "bootstrap/dist/js/bootstrap.bundle.min";
 import React, { useState } from "react";
-import { Card, Form, Row, Col } from "react-bootstrap";
+import { Card, Form, Row, Col, Button } from "react-bootstrap";
 
 
 export default function LoginForm(props) {
