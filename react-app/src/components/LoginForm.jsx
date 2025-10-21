@@ -15,11 +15,15 @@ export default function LoginForm({onLogin}) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})
         })
-        .then(res =>{
-            if (res.ok){
-                onLogin();
-            }
+        .then(res=>res.json())
+        .then(res=>{
+            //console.log(res)
+            if(res.result.lentgh>=1) onLogin();
         })
+
+        
+        
+        .catch(console.warn)
     }
 
 
