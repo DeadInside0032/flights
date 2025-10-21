@@ -15,8 +15,11 @@ export default function LoginForm(props) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, password})
         })
-        .then(console.log)
-        .catch(console.warn)
+        .then(res =>{
+            if (res.ok){
+                // TODO
+            }
+        })
     }
 
 
