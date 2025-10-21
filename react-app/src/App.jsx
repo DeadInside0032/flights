@@ -18,14 +18,16 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 
 export default function App() {
-  const [loggedIn, setLoggedIn] = useState(false); // TODO - start with false and implement Login
+  const [loggedIn, setLoggedIn] = useState(false); // - start with false and implement Login
 
-
+  const handleLogout = e => {
+    window.location.href = '/'
+  }
   
 
   return (
     <Router>
-      {loggedIn && <NavbarMenu onLogout={() => setLoggedIn(false)} />}
+      {loggedIn && <NavbarMenu onLogout={e => handleLogout(e)} />}
       <Routes>
         <Route path="/" element=
           {loggedIn ? <Navigate to="/destinations" /> : <Login onLogin={() => setLoggedIn(true)} />} />
