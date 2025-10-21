@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, Form, Row, Col, Button } from "react-bootstrap";
 
 
-export default function LoginForm(props) {
+export default function LoginForm({onLogin}) {
 
     const handleLogin=e=>{
         e.preventDefault();
@@ -17,7 +17,7 @@ export default function LoginForm(props) {
         })
         .then(res =>{
             if (res.ok){
-                // TODO
+                onLogin();
             }
         })
     }

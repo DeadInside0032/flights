@@ -5,7 +5,7 @@ export default class Login extends Component {
     render() {
         return (
             <Card>
-                <LoginForm/>
+                <LoginForm onLogin={this.props.onLogin}/>
             </Card>
         )
     }
